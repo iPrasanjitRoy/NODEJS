@@ -1,0 +1,11 @@
+{
+  "name": "full-stack-development-2023-node-12-event",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Event.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

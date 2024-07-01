@@ -1,0 +1,13 @@
+{
+    "_id": {
+        "$oid": "667bc27137308a481f405207"
+    },
+    "title": "iPhone 13 Pro",
+    "description": "The iPhone 13 Pro is the latest flagship smartphone from Apple.",
+    "price": 999.99,
+    "discountPercentage": 0,
+    "rating": 4.8,
+    "brand": "Apple",
+    "category": "Electronics",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWoWomvhSBX2u8BeWgseh2eqavkxW4MkKl5Q&s"
+}

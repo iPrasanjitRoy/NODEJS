@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS styles should be moved to styles.css for better organization */
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* Prevent horizontal scrollbar */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: box-shadow 0.3s ease;
+            margin-top: 100px;
+
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            padding: 20px 0;
+            text-align: center;
+
+        }
+
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .slide {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            margin-top: 20px;
+        }
+
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .slide h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .slide p {
+            font-size: 1.2em;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        footer p {
+            font-size: 0.8em;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Hello, World!</h1>
+        </header>
+        <main>
+            <div class="slideshow">
+                <div class="slide active">
+                    <h2>Section 1</h2>
+                    <p>Content for Section 1 goes here.</p>
+                </div>
+                <div class="slide">
+                    <h2>Section 2</h2>
+                    <p>Content for Section 2 goes here.</p>
+                </div>
+                <div class="slide">
+                    <h2>Section 3</h2>
+                    <p>Content for Section 3 goes here.</p>
+                </div>
+                <div class="slide">
+                    <h2>Section 4</h2>
+                    <p>Content for Section 4 goes here.</p>
+                </div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </main>
+        <footer>
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+
+        // Function To Show Slides 
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+
+            // If Slideindex Is Greater Than The Number Of Slides, Reset To 1 
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            // Add The "Active" Class To The Current Slide (Slideindex - 1)
+            slides[slideIndex - 1].classList.add("active");
+        }
+
+        // Initial Slide display
+        showSlides();
+
+        // Automatic Slide Change Every 5 Seconds 
+        setInterval(showSlides, 5000);
+
+        // Function To Change Slide Manually 
+        function changeSlide(n) {
+            // Increment Slideindex By N 
+            slideIndex += n;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            // If Slideindex Is Less Than 1, Set To The Last Slide (Slides.length) 
+            if (slideIndex < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slides[slideIndex - 1].classList.add("active");
+        }
+
+    </script>
+</body>
+
+</html>

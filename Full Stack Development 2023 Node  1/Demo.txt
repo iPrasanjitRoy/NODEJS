@@ -1,0 +1,4 @@
+Node.js, often simply called Node, is a powerful and versatile open-source runtime environment that allows developers to build scalable and efficient server-side applications using JavaScript. 
+Launched in 2009, Node.js has revolutionized backend development with its event-driven, non-blocking I/O model, which makes it lightweight and efficient for handling data-intensive real-time applications. 
+Its extensive package ecosystem, npm, provides access to thousands of libraries and tools, enabling developers to rapidly prototype and deploy applications across various domains, from web servers to microservices and IoT devices. 
+Node.js continues to thrive as a cornerstone of modern web development, empowering developers to create robust and high-performance applications with ease.  

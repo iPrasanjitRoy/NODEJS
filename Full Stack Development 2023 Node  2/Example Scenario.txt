@@ -1,0 +1,19 @@
+Example Scenario: 
+
+👉 Suppose The Request URL Is /product/123. Here, Id Will Be '123' Initially.
+
+👉 (+id) Converts '123' (A String) To 123 (A Number).
+
+👉 The .find() Method Searches Through The Products Array To Find An Object Where P.id === 123.
+
+👉 If A Product With Id 123 Exists In The Products Array, That Product Object Is Assigned To Product.
+If No Such Product Exists, Product Will Be Undefined. 
+
+
+
+👉 slideIndex - 1 Is Used To Access The Correct Slide Within The Slides Collection:
+
+👉 When Slideindex Is 1, Slides[slideindex - 1] Accesses The First Element In Slides (At Index 0).
+👉 When Slideindex Is 2, Slides[slideindex - 1] Accesses The Second Element In Slides (At Index 1), And So On. 
+
+

@@ -1,0 +1,19 @@
+{
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "a example of node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node Index.js",
+    "dev": "nodemon Index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prasanjit",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
